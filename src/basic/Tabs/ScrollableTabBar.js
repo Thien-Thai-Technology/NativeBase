@@ -37,6 +37,7 @@ const ScrollableTabBar = createReactClass({
     renderTab: PropTypes.func,
     underlineStyle: ViewPropTypes.style,
     onScroll: PropTypes.func,
+    backgroundView: PropTypes.object,
     leftView: PropTypes.object,
     rightView: PropTypes.object,
 
@@ -241,6 +242,7 @@ const ScrollableTabBar = createReactClass({
         ]}
         onLayout={this.onContainerLayout}
       >
+        {this.props.backgroundView}
         {this.props.leftView}
         <ScrollView
           automaticallyAdjustContentInsets={false}
